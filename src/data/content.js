@@ -1,6 +1,6 @@
 // Conteúdo do site. Edite aqui para adicionar posts, materiais, projetos e links.
 
-export const EMAIL = 'SEU_EMAIL_AQUI'
+export const EMAIL = 'bielmarques922@gmail.com'
 export const INSTAGRAM = 'https://www.instagram.com/silentcode.br/'
 export const LINKEDIN = 'https://www.linkedin.com/in/dev-gabriel-marques/'
 

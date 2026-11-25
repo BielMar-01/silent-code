@@ -19,4 +19,4 @@ Site em React + Vite.
 
 Importe o repositório na Vercel com o preset Vite. Não há variáveis de ambiente.
 
-Depois de ter o endereço final, substitua `SEU_DOMINIO` (sem https://) em `index.html`, `public/robots.txt` e `public/sitemap.xml`, e `SEU_EMAIL_AQUI` em `src/data/content.js`.
+O site está em https://silent-code-br.vercel.app/. Se o domínio mudar, atualize `index.html`, `public/robots.txt` e `public/sitemap.xml`. O e-mail de contato fica em `src/data/content.js`.
