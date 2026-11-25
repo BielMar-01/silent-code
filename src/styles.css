@@ -32,5 +32,30 @@ button{cursor:pointer;font:inherit;color:var(--tx)}button.btn{border:0}
 .note{font-size:13px;color:var(--mu)}
 footer{padding:32px 0;border-top:1px solid var(--line);color:var(--mu);font-size:13px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-@media(max-width:640px){nav{gap:14px;font-size:13px}.hero{padding:56px 24px 40px}}
+section{scroll-margin-top:64px}.menu-toggle{display:none}
+/* Celular e tablet em pé: menu recolhido */
+@media(max-width:768px){
+.menu-toggle{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-right:-10px;background:none;border:0;border-radius:10px}
+.menu-toggle span,.menu-toggle span::before,.menu-toggle span::after{display:block;width:22px;height:2px;border-radius:2px;background:var(--tx);transition:transform .2s}
+.menu-toggle span{position:relative}.menu-toggle span::before,.menu-toggle span::after{content:'';position:absolute;left:0}
+.menu-toggle span::before{transform:translateY(-7px)}.menu-toggle span::after{transform:translateY(7px)}
+.menu-toggle[aria-expanded=true] span{background:transparent}
+.menu-toggle[aria-expanded=true] span::before{transform:rotate(45deg)}.menu-toggle[aria-expanded=true] span::after{transform:rotate(-45deg)}
+nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:8px 24px 16px;background:var(--bg);border-bottom:1px solid var(--line);font-size:16px;max-height:calc(100dvh - 65px);overflow-y:auto}
+nav.open{display:flex}
+nav a{display:flex;align-items:center;min-height:48px;flex-shrink:0;color:var(--tx)}nav a+a{border-top:1px solid var(--line)}
+.logo{display:flex;align-items:center;min-height:44px}
+.card a.dl{display:flex;align-items:center;justify-content:center;min-height:44px;border:1px solid var(--line);border-radius:10px}
+}
+@media(max-width:640px){
+.wrap{padding:0 20px}
+.hero{padding:48px 20px 40px}.hero h1{font-size:clamp(32px,10vw,40px)}.hero p{font-size:16px}
+.btns{flex-direction:column;margin-top:24px}.btn{text-align:center}
+section{padding:44px 0}section h2{font-size:26px}.lead{margin-bottom:24px}
+.grid{grid-template-columns:1fr;gap:12px}.card{padding:18px}.card p{font-size:15px}
+ul.links{grid-template-columns:1fr}
+.note{text-align:center}
+footer{padding:24px 0 calc(24px + env(safe-area-inset-bottom))}footer .wrap{flex-direction:column;gap:4px;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.menu-toggle span,.menu-toggle span::before,.menu-toggle span::after{transition:none}}
 .skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--pu);padding:8px 12px;border-radius:8px;z-index:20}a:focus-visible,button:focus-visible{outline:2px solid var(--bl);outline-offset:3px}
